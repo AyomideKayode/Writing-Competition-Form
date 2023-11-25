@@ -17,44 +17,22 @@
 			<p>Euphony Pen 2024 Edition Annual Writing Competition</p>
 		</div> -->
 		<section class="form_section">
-			<form id="fs-frm" name="registration-form" accept-charset="utf-8"
-			action="your_custom_domain{form_id}"
-			method="post"
-			>
+			<form id="fs-frm" name="registration-form" accept-charset="utf-8" action="your_custom_domain{form_id}" method="post">
 			<h1>Euphony Pen Submission Form</h1>
 			<p>Euphony Pen 2024 Edition Annual Writing Competition</p>
 			<fieldset id="fs-frm-inputs">
-				<label for="full-name">Full Name</label>
-				<input
-				type="text"
-				name="name"
-				id="full-name"
-				placeholder="First and Last"
-				required=""
-				/>
-				<label for="email-address">Email Address</label>
-				<input
-				type="email"
-				name="_replyto"
-				id="email-address"
-				placeholder="email@domain.tld"
-				required=""
-				/>
-				<label for="telephone">Telephone Number</label>
-				<input
-				type="telephone"
-				name="telephone"
-				id="telephone"
-				placeholder="+234 123 456 7893"
-				/>
-				<label for="street-address">Street Address</label>
-				<input
-				type="text"
-				name="street"
-				id="street-address"
-				placeholder="Street"
-				required=""
-				/>
+				<label for="full-name" class="required">Full Name</label>
+				<input type="text" name="name" id="full-name" placeholder="First and Last" required=""/>
+
+				<label for="email-address" class="required">Email Address</label>
+				<input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required=""/>
+
+				<label for="telephone" class="required">Telephone Number</label>
+				<input type="telephone" name="telephone" id="telephone" placeholder="+234 123 456 7893"/>
+
+				<label for="street-address" class="required">Street Address</label>
+				<input type="text" name="street" id="street-address" placeholder="Street" required=""/>
+
 				<fieldset class="locale">
 				<legend>Locale</legend>
 				<input type="text" name="city" placeholder="City" required="" />
@@ -96,34 +74,46 @@
 					<option value="Taraba">Taraba</option>
 					<option value="Yobe">Yobe</option>
 					<option value="Zamfara">Zamfara</option>
-					<font color="WHITE"
-					><option value="Federal Capital Territory">
-						Federal Capital Territory (FCT)
-					</option></font
-					>
+					<font color="WHITE">
+						<option value="Federal Capital Territory">Federal Capital Territory (FCT)</option>
+					</font>
 				</select>
-				<input
-					type="text"
-					name="postal-code"
-					placeholder="12345"
-					required=""
-				/>
+				<input type="text" name="postal-code" placeholder="12345" required=""/>
 				</fieldset>
+
+				<!-- New fieldset for article submission -->
+				<fieldset id="fs-article-inputs">
+					<!-- <legend class="article_submission">Article Submission</legend> -->
+					<h2>Article Information</h2>
+					<p>REQUIRED</p>
+
+					<label for="article-title" class="required">Article Title</label>
+					<input type="text" name="article_title" id="article-title" placeholder="Enter the title" required>
+
+					<label for="article-url" class="required">Article URL</label>
+					<input type="url" name="article_url" id="article-url" placeholder="https://example.com" required>
+
+					<label for="author-name" class="required">Author's Name</label>
+					<input type="text" name="author_name" id="author-name" placeholder="Author's Name" required>
+
+					<label for="file-upload">Upload your work</label>
+					<input type="file" name="file_upload" id="file-upload" accept=".pdf, .doc, .docx" required>
+				</fieldset>
+
 				<label for="note">Note</label>
-				<textarea
-				rows="2"
-				name="note"
-				id="note"
-				placeholder="Include any additional information"
-				></textarea>
-				<input
-				type="hidden"
-				name="_subject"
-				id="email-subject"
-				value="Registration Form Submission"
-				/>
+				<textarea rows="2" name="note" id="note" placeholder="Include any additional information"></textarea>
+
+				<input type="hidden" name="_subject" id="email-subject" value="Registration Form Submission"/>
 			</fieldset>
-			<input type="submit" value="Register" />
+
+			<h3>Thank you!</h3>
+			<p>
+				We will contact you shortly when we have approved your submission or if we need you to revise your work.
+			</p>
+
+			<button>
+				<input type="submit" value="Register"/>
+			</button>
 			</form>
 		</section>
 		<footer></footer>

@@ -26,7 +26,7 @@ body {
 
 .form_section {
 	max-width: 1040px;
-	margin: auto;
+	margin: 3rem auto;
 	padding: 2rem;
 	border: 2px dotted #563d32;
 	display: flex;
@@ -36,12 +36,20 @@ body {
 
 .form_section form h1 {
 	font-size: 2.5rem;
+	font-weight: 700;
 	margin: 32px auto;
 	color: rgb(81, 61, 50);
 }
 
+.form_section form h3,
+.form_section form h2 {
+	font-size: 1.85rem;
+	margin: 24px auto;
+	color: rgb(81, 61, 50);
+}
+
 .form_section form p {
-	font-weight: 400;
+	font-weight: 500;
 	margin-bottom: 32px;
 }
 
@@ -61,18 +69,25 @@ body {
 	width: 100%;
 	padding: 0;
 	margin: 0;
-	-webkit-appearance: none;
-	-moz-appearance: none;
+	/* -webkit-appearance: none;
+	-moz-appearance: none; */
 }
 
 #fs-frm label,
 #fs-frm legend,
 #fs-frm ::placeholder {
 	font-size: 1rem;
+	font-weight: 600;
 	margin-bottom: 0.5rem;
 	padding-top: 0.2rem;
 	display: flex;
 	align-items: baseline;
+}
+
+/* required fields */
+label.required::after {
+    content: " *";
+    color: red;
 }
 
 /* border, padding, margin, width */
@@ -95,10 +110,12 @@ body {
 	outline-color: gray;
 	outline-offset: -1px;
 }
+
 #fs-frm [type="text"],
 #fs-frm [type="email"] {
     width: 100%;
 }
+
 #fs-frm [type="button"],
 #fs-frm [type="submit"],
 #fs-frm [type="reset"] {
@@ -108,15 +125,18 @@ body {
 	-moz-appearance: button;
 	appearance: button;
 }
+
 #fs-frm [type="button"]:focus,
 #fs-frm [type="submit"]:focus,
 #fs-frm [type="reset"]:focus {
     outline: none;
 }
+
 #fs-frm [type="submit"],
 #fs-frm [type="reset"] {
     margin-bottom: 0;
 }
+
 #fs-frm select {
     text-transform: none;
 }
@@ -142,14 +162,22 @@ body {
 #fs-frm fieldset.locale input[name="postal-code"] {
     display: inline;
 }
+
 #fs-frm fieldset.locale input[name="city"] {
     width: 52%;
 }
+
 #fs-frm fieldset.locale select[name="state"],
 #fs-frm fieldset.locale input[name="postal-code"] {
     width: 20%;
 }
+
 #fs-frm fieldset.locale input[name="city"],
 #fs-frm fieldset.locale select[name="state"] {
     margin-right: 3%;
+}
+
+button {
+	border: 2px solid #51626A;
+	border-radius: 4px;
 }
